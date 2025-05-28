@@ -104,6 +104,13 @@ p.publication-date {
   margin-top: 0.3em; /* Added top margin for spacing from title */
 }
 
+.news-item p.news-source {
+  font-size: 0.75em;
+  font-style: italic;
+  color: #BBBBBB; /* Lighter than main text, but readable */
+  margin-bottom: 0.5em;
+}
+
 p.description {
   color: #F0F0F0; /* Main text color */
   font-size: 0.95em; /* Slightly smaller for balance */
