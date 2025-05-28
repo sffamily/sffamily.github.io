@@ -1,0 +1,170 @@
+/* Reset and Box Sizing */
+body, h1, h2, h3, p, ul, li, header, nav, main, footer, article, section {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 1. General Body and Typography */
+body {
+  background-color: #0A2647; /* Primary dark blue */
+  color: #F0F0F0; /* Light gray text */
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+}
+
+/* 2. Header */
+header {
+  background-color: #1C3F6E; /* Secondary blue */
+  padding: 1em 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #F0F0F0; /* Light gray or white */
+  text-shadow: 1px 1px 2px #000000a0;
+}
+
+/* 3. Navigation Bar */
+nav {
+  background-color: #1C3F6E; /* Same as header or slightly different */
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 0.5em 1em;
+  color: #F0F0F0; /* Light gray or white */
+  text-decoration: none;
+  display: block; /* Ensures padding is clickable */
+}
+
+nav ul li a:hover {
+  background-color: #2095AE; /* Accent color */
+  color: #FFFFFF;
+}
+
+/* 4. Main Content Area */
+main {
+  padding: 2em;
+}
+
+/* 5. News Section Heading (h2) */
+main section h2 {
+  color: #2095AE; /* Accent color */
+  margin-bottom: 1em;
+  font-size: 2em;
+  text-align: center; /* Centering the main section title */
+}
+
+/* 6. News Items */
+#news-content {
+  /* Single column by default, which is responsive.
+     Future enhancement: Use Grid or Flexbox for multi-column layouts.
+     e.g.,
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 1.5em;
+  */
+}
+
+article.news-item {
+  background-color: #1C3F6E; /* Slightly lighter shade than body */
+  margin-bottom: 1.5em;
+  padding: 1.5em; /* Increased padding for better spacing */
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px #00000080, 0 0 10px rgba(0,0,0,0.3); /* Enhanced shadow */
+  border: 1px solid #0A2647; /* Subtle border matching body for depth */
+}
+
+article.news-item h3 a {
+  color: #2095AE; /* Accent color */
+  text-decoration: none;
+  font-size: 1.4em; /* Slightly larger for better hierarchy */
+}
+
+article.news-item h3 a:hover {
+  text-decoration: underline;
+  color: #2ae8ff; /* Brighter accent on hover */
+}
+
+p.publication-date {
+  font-size: 0.8em;
+  color: #AAAAAA; /* Lighter gray */
+  margin-bottom: 0.5em;
+  margin-top: 0.3em; /* Added top margin for spacing from title */
+}
+
+p.description {
+  color: #F0F0F0; /* Main text color */
+  font-size: 0.95em; /* Slightly smaller for balance */
+  line-height: 1.5; /* Adjusted for description block */
+}
+
+/* 7. Footer */
+footer {
+  background-color: #08213F; /* Darker shade for footer */
+  padding: 1.5em 0; /* Increased padding */
+  text-align: center;
+  color: #AAAAAA; /* Lighter gray for footer text */
+  font-size: 0.9em;
+  margin-top: 2em; /* Space above footer */
+}
+
+/* 8. Responsive Design (Basic - covered by viewport meta and relative units) */
+/* Media query example for future multi-column layout for news items */
+@media (min-width: 768px) {
+  #news-content {
+    /* Example: Enable 2-column layout on tablets and wider */
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* gap: 1.5em; */
+  }
+
+  main {
+    padding: 2em 5%; /* Adjust padding for wider screens */
+  }
+
+  header h1 {
+    font-size: 3em; /* Slightly larger title on desktop */
+  }
+
+  nav ul li a {
+    padding: 0.75em 1.5em; /* Larger clickable area for nav links */
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 2em 10%; /* Further adjust padding for very wide screens */
+  }
+  /* Potentially 3 columns for news on very wide screens */
+  /* #news-content {
+    grid-template-columns: repeat(3, 1fr);
+  } */
+}
+
+/* Adding some global link styling for consistency if any other links appear */
+a {
+  color: #2095AE; /* Default accent color for links */
+}
+
+a:hover {
+  color: #2ae8ff; /* Brighter accent on hover */
+}
+
+/* Ensure images are responsive if added later */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Remove extra space below images */
+}
